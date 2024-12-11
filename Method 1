@@ -1,0 +1,37 @@
+public class pattern {
+public static int reverse(int a) {
+int rev=0;
+while(a!=0) {
+rev=rev+(a%10);
+rev=rev*10;
+a=a/10;
+
+}
+return(rev/10);
+}
+
+public static void main(String[] args) {
+int n=4;
+int count=3;
+
+for(int i=1;i0;j–) {
+System.out.print(count);
+count++;
+}
+
+System.out.println();
+}
+count=count-n-1;
+
+for(int i=n-1;i>=1;i–) {
+int sum=0;
+for(int j=i;j>0;j–) {
+sum=sum+count;
+sum=sum*10;
+count–;
+}
+System.out.print (reverse(sum));
+System.out.println();
+}
+}
+}
